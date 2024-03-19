@@ -6,9 +6,24 @@
     font-style: normal;
     font-weight: normal;
     }
-    
+    .hero{
+        color: rgb(58, 45, 32);
+        margin-top: 100px;
+        margin-bottom: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .history-paragraph{
+        color: rgb(58, 45, 32);
+    }
+    .history-header{
+        color: rgb(58, 45, 32);
+    }
+    /* *{
+        border: 3px blue dashed;
+    } */
     body{
-    background-color: lightsteelblue;
+    background-color: rgb(240, 226, 209);
     font-family: 'Trispace';
 }
 /* how the page wrapper will appear on mobile */
@@ -19,31 +34,117 @@
 /* how the page wrapper appears on desktop */
 
 @media only screen and (min-width:800px){
-.page-wrapper{
+#history{
+padding-bottom: 150px;
 display: grid;
-grid-gap: 25px;
-grid-template-columns: 1fr 1fr;
-grid-template-rows: auto;
+grid-gap: 1px;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: auto auto auto;
 grid-template-areas: 
-    "h v"
-    "a a";
+    ". h h h h . . . . . . ."
+    ". p p p p p p . w w w ."
+    ". p p p p p p . w w w .";
 }
 
-.history {
+.hashtag-wrapper {
+grid-area: w;
+}
+
+.history-header {
+font-size: 25px;
 grid-area: h;
+padding: 0px;
+margin: 0px;
 }
 
-.variations{
-grid-area: v;
+.history-paragraph{
+    grid-area: p;
 }
 
-.alphabet {
-grid-area: a;
 }
+@media only screen and (min-width:800px){
+    #character{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgb(58, 45, 32);
+    color: rgb(240, 226, 209);
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        ". t t t t .  . . . . ."
+        ". a a a . .  b b b b ."
+        ". c c c . .  d d d d ."
+        ". e e e . .  f f f f .";
+    }
+    .character-header {
+        font-size: 25px;
+        grid-area: t;
+    }
+    .alphabet-title {
+        grid-area: a;
+    }
+    .alphabet-paragraph {
+        grid-area: b;
+    }
+    .special-title {
+        grid-area: c;
+    }
+    .special-paragraph {
+        grid-area: d;
+    }
+    .numbers-title {
+        grid-area: e;
+    }
+    .numbers-paragraph {
+        grid-area: f;
+    }
+
+}
+@media only screen and (min-width:800px){
+    #axis-section{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    color: rgb(58, 45, 32);
+    display: grid;
+    animation: weightChange 5s infinite;
+    grid-gap: 1px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+        ". t t t t . . . ."
+        ". l . . . . . r ."
+        ". l . a a a a r ."
+        ". l . b b b b r ."
+        ". l . . . . . r .";
+    }
+    .axis-header {
+        grid-area: t;
+        font-size: 25px;
+        margin-top: 50px;
+    }
+    .left-bracket {
+        grid-area: l;
+        font-size: 150px;
+    }
+    .right-bracket {
+        grid-area: r;
+        font-size: 150px;
+    }
+    .axis-paragraph1 {
+        grid-area: a;
+        font-size: 20px;
+    }
+    .axis-paragraph2 {
+        grid-area: b;
+        font-size: 20px;
+    }
 }
 /* CSS for the footer */
 footer{
-    background-color: gray;
+    background-color: rgb(58, 45, 32);
+    color: rgb(240, 226, 209);
 }
 
 /* variable font animation */
@@ -56,9 +157,9 @@ h3{
 
 @keyframes weightChange {
     0%, 100%{
-        font-variation-settings: "wght" 100, "wdth" 100;
+        font-variation-settings: "wght" 100, "wdth" 800;
     }
-    50%{font-variation-settings: "wght" 800, "wdth" 100;
+    50%{font-variation-settings: "wght" 800, "wdth" 500;
     }
     
 }
