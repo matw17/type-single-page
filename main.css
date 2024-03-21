@@ -30,24 +30,31 @@
 .page-wrapper{
     width: min(100% - 3rem, 80ch);
     margin-inline: auto;
+    
+}
+.hero {
+    font-size: 10px;
 }
 /* how the page wrapper appears on desktop */
 
 @media only screen and (min-width:800px){
 #history{
-padding-bottom: 150px;
+
 display: grid;
 grid-gap: 1px;
-grid-template-columns: repeat(12, 1fr);
+grid-template-columns: repeat(13, 1fr);
 grid-template-rows: auto auto auto;
 grid-template-areas: 
-    ". h h h h . . . . . . ."
-    ". p p p p p p . w w w ."
-    ". p p p p p p . w w w .";
+    ". h h h h . . . w w w w w"
+    ". p p p p p p . w w w w w"
+    ". p p p p p p . . . . . .";
 }
 
 .hashtag-wrapper {
 grid-area: w;
+font-size: 300px;
+color: rgb(58, 45, 32);
+animation: weightChange 7s infinite;
 }
 
 .history-header {
@@ -64,7 +71,7 @@ margin: 0px;
 }
 @media only screen and (min-width:800px){
     #character{
-    padding-top: 50px;
+    
     padding-bottom: 50px;
     background-color: rgb(58, 45, 32);
     color: rgb(240, 226, 209);
@@ -108,16 +115,17 @@ margin: 0px;
     padding-bottom: 50px;
     color: rgb(58, 45, 32);
     display: grid;
-    animation: weightChange 5s infinite;
+    animation: weightChange 6s infinite;
     grid-gap: 1px;
     grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-template-areas: 
         ". t t t t . . . ."
         ". l . . . . . r ."
-        ". l . a a a a r ."
-        ". l . b b b b r ."
-        ". l . . . . . r .";
+        ". l a a a a a r ."
+        ". l b b b b b r ."
+        ". l . . . . . r ."
+        ". . . o o o . . .";
     }
     .axis-header {
         grid-area: t;
@@ -140,11 +148,58 @@ margin: 0px;
         grid-area: b;
         font-size: 20px;
     }
+    .outline {
+        grid-area: o;
+    }
 }
 /* CSS for the footer */
 footer{
     background-color: rgb(58, 45, 32);
     color: rgb(240, 226, 209);
+}
+@media only screen and (min-width:800px){
+    #feet{
+    background-color: rgb(58, 45, 32);
+    color: rgb(240, 226, 209);
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        ". . . . t t t t . . ."
+        ". a a a . . b b b b ."
+        ". a a a . . b b b b ."
+        ". c c c . . l l i i .";
+    }
+    .footer-paragraph1 {
+        grid-area: a;   
+    }
+    .footer-paragraph2 {
+        grid-area: b;
+    }
+    .linkedin {
+        grid-area: l;
+        color: rgb(240, 226, 209);
+    }
+    .footer-title {
+        grid-area: t;
+        font-size: 25px;
+        margin-left: 55px;
+    }
+    .insta {
+        grid-area: i;
+        color: rgb(240, 226, 209);
+    }
+    .cvpa {
+        grid-area: c;
+    }
+    .insta:hover {
+        color: aquamarine;
+    }
+    .linkedin:hover {
+        color: aquamarine;
+    }
+
 }
 
 /* variable font animation */
@@ -188,4 +243,15 @@ h3{
     text-align: center;
     font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
 }
+.outline {
+    background-color: transparent;
+    color: rgb(58, 45, 32);
+    border: 2px solid rgb(58, 45, 32);
+    transition: all 0.3s ease;
+    text-align: center;
+}
 
+.outline:hover {
+    background-color:rgb(58, 45, 32);
+    color: #fff;
+}
