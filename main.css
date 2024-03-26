@@ -190,10 +190,10 @@ footer{
         grid-area: c;
     }
     .insta:hover {
-        color: aquamarine;
+        color: rgb(93, 78, 58);
     }
     .linkedin:hover {
-        color: aquamarine;
+        color: rgb(93, 78, 58);
     }
 
 }

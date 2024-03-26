@@ -55,7 +55,7 @@
   }
   /* where to change the font color of the nav bar pop-up */
   nav a:hover {
-      color: aquamarine;
+      color: rgb(93, 78, 58);
   }
   
   .nav-checkbox:checked ~ nav {
