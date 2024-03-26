@@ -31,7 +31,7 @@
 
 /* how the page wrapper appears on desktop */
 
-@media only screen and (min-width:800px){
+/* @media only screen and (min-width:800px){ */
 #history{
 
 display: grid;
@@ -64,8 +64,8 @@ margin: 0px;
     grid-area: p;
 }
 
-}
-@media only screen and (min-width:800px){
+/* } */
+/* @media only screen and (min-width:800px){ */
     #character{
     
     padding-bottom: 50px;
@@ -76,7 +76,7 @@ margin: 0px;
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
-        ". t t t t .  . . . . ."
+        ". t t t t t  t . . . ."
         ". a a a . .  b b b b ."
         ". c c c . .  d d d d ."
         ". e e e . .  f f f f .";
@@ -104,8 +104,8 @@ margin: 0px;
         grid-area: f;
     }
 
-}
-@media only screen and (min-width:800px){
+/* } */
+/* @media only screen and (min-width:800px){ */
     #axis-section{
     padding-top: 100px;
     padding-bottom: 50px;
@@ -147,7 +147,7 @@ margin: 0px;
     .outline {
         grid-area: o;
     }
-}
+/* } */
 /* CSS for the footer */
 footer{
     background-color: rgb(58, 45, 32);
@@ -251,4 +251,14 @@ h3{
 .outline:hover {
     background-color:rgb(58, 45, 32);
     color: rgb(240, 226, 209);
+}
+
+@media only screen and (max-width:700px){
+    .hero {
+        font-size: 10px;
+    }
+    
+    #axis-section {
+        font-size: 10px;
+    }
 }
