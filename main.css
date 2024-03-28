@@ -8,7 +8,7 @@
     }
     .hero{
         color: rgb(58, 45, 32);
-        padding-top: 100px;
+        padding-top: 200px;
     }
     .history-paragraph{
         color: rgb(58, 45, 32);
@@ -180,7 +180,7 @@ footer{
     .footer-title {
         grid-area: t;
         font-size: 25px;
-        margin-left: 55px;
+        margin-left: 75px;
     }
     .insta {
         grid-area: i;
@@ -190,10 +190,10 @@ footer{
         grid-area: c;
     }
     .insta:hover {
-        color: rgb(93, 78, 58);
+        color: rgb(145, 122, 92);
     }
     .linkedin:hover {
-        color: rgb(93, 78, 58);
+        color: rgb(145, 122, 92);
     }
 
 }

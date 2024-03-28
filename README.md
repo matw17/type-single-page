@@ -1,2 +1,3 @@
 # type-single-page
  
+This web page was created for a school project on the variable font of Trispace. A variable font is a font that can be adjusted through various axis such as weight and width. In the site I included a section about the history of the trispace font, a list of all the characters the font comes with, and a section that displays the different axis that the font changes on. It was my first time using keyframes to add motion to a site as well as my first time using a navigation bar. I have used css grid once before but this was my first time actually typing out the grid and assigning areas to different items. 
